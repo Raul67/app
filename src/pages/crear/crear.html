@@ -1,0 +1,80 @@
+<!--
+  Generated template for the Crear1Page page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="dark">
+    <ion-title>Crear evento</ion-title>
+    <button ion-button color="dark" (click)="validar()">Validar</button>
+    <button ion-button color="dark" (click)="eventos()">Evento</button>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="signOut()">
+        <ion-icon name="log-out"></ion-icon>
+      </button>
+
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class = "fondo">
+
+<form [formGroup]="eventoForm"(submit)="guardarEvento()" novalidate>
+
+<ion-item>
+    <ion-label color="primary">Nombre del evento</ion-label>
+    <ion-input placeholder="Festival de drones" formControlName = "nombre"></ion-input>
+  </ion-item>
+
+<ion-item>
+    <ion-label color="primary">Hora</ion-label>
+    <ion-input type = "time" formControlName = "hora" ></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="primary">Fecha</ion-label>
+    <ion-input type = "date" formControlName = "fecha" ></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="primary">Lugar</ion-label>
+    <ion-input placeholder="Expo Guadalajara" formControlName = "lugar"></ion-input>
+  </ion-item>
+
+<ion-item>
+    <ion-label color="dark"><em>Categoría</em></ion-label>
+    <ion-select formControlName = "categoria">
+        <ion-option >Arte</ion-option>
+        <ion-option >Música</ion-option>
+        <ion-option >Tecnología</ion-option>
+        <ion-option >Ciencias Exactas</ion-option>
+        <ion-option >Idiomas</ion-option>
+        <ion-option >Letras</ion-option>
+      </ion-select>
+
+</ion-item>
+
+<ion-item>
+    <ion-label color="primary">Descripción</ion-label>
+    <ion-input placeholder="Concurso de oratoria..." formControlName = "descripcion"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="primary">Insripción</ion-label>
+    <ion-input placeholder="Boletos disponibles en..." formControlName = "inscripcion"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="primary">Requisitos</ion-label>
+    <ion-input placeholder="Rango de edad..." formControlName = "requisitos"></ion-input>
+  </ion-item>
+
+	<button ion-button color = "dark" type="submit">Crear</button>
+
+
+</form>
+
+
+</ion-content>

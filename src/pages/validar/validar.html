@@ -1,0 +1,149 @@
+<ion-header>
+
+  <ion-navbar color="dark">
+    <ion-title>Validar</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="fondo" padding color="primary">
+    <img class="logo" src="img/logo.png">
+
+	<ion-list>
+		<ion-item>
+			Arte
+		</ion-item>
+	<ion-item  *ngFor= " let arte of eventosA" text-wrap >
+
+	   <h2 ><strong><em>ID: {{arte.id}}</em></strong></h2>
+	    <h2 ><strong><em>Nombre: {{arte.nombre}}</em></strong></h2>
+	    <h2 ><strong><em>Hora: {{arte.hora}}</em></strong></h2>
+	    <h2 ><strong><em>Fecha: {{arte.fecha}}</em></strong></h2>
+	    <h2 ><strong><em>Lugar: {{arte.lugar}}</em></strong></h2>
+	    <h2 ><strong><em>Descripcion: {{arte.descripcion}}</em></strong></h2>
+	    <h2 ><strong><em>Inscripcion: {{arte.inscripcion}}</em></strong></h2>
+	    <h2 ><strong><em>Requisitos: {{arte.requisitos}}</em></strong></h2>
+
+	    <button ion-button (click)="guardarEvento(arte,arte.id,arte.categoria)" >Aceptar</button>
+	    <button ion-button (click)="borrarEvaluacion(arte.id,arte.categoria)" >Rechazar</button>
+
+	</ion-item>
+
+	</ion-list>
+
+
+
+	<ion-list >
+		<ion-item>
+			Música
+		</ion-item>
+	<ion-item  *ngFor= " let musica of eventosM" text-wrap >
+
+	   <h2 ><strong><em>ID: {{musica.id}}</em></strong></h2>
+	    <h2 ><strong><em>Nombre: {{musica.nombre}}</em></strong></h2>
+	    <h2 ><strong><em>Hora: {{musica.hora}}</em></strong></h2>
+	    <h2 ><strong><em>Fecha: {{musica.fecha}}</em></strong></h2>
+	    <h2 ><strong><em>Lugar: {{musica.lugar}}</em></strong></h2>
+	    <h2 ><strong><em>Descripcion: {{musica.descripcion}}</em></strong></h2>
+	    <h2 ><strong><em>Inscripcion: {{musica.inscripcion}}</em></strong></h2>
+	    <h2 ><strong><em>Requisitos: {{musica.requisitos}}</em></strong></h2>
+
+	    <button ion-button (click)="guardarEvento(musica,musica.id,musica.categoria)">Aceptar</button>
+	    <button ion-button (click)="borrarEvaluacion(musica.id,musica.categoria)">Rechazar</button>
+
+	</ion-item>
+
+	</ion-list>
+
+
+	<ion-list >
+		<ion-item>
+			Tecnología
+		</ion-item>
+	<ion-item  *ngFor= " let tecnologia of eventosT" text-wrap >
+
+	   <h2 ><strong><em>ID: {{tecnologia.id}}</em></strong></h2>
+	    <h2 ><strong><em>Nombre: {{tecnologia.nombre}}</em></strong></h2>
+	    <h2 ><strong><em>Hora: {{tecnologia.hora}}</em></strong></h2>
+	    <h2 ><strong><em>Fecha: {{tecnologia.fecha}}</em></strong></h2>
+	    <h2 ><strong><em>Lugar: {{tecnologia.lugar}}</em></strong></h2>
+	    <h2 ><strong><em>Descripcion: {{tecnologia.descripcion}}</em></strong></h2>
+	    <h2 ><strong><em>Inscripcion: {{tecnologia.inscripcion}}</em></strong></h2>
+	    <h2 ><strong><em>Requisitos: {{tecnologia.requisitos}}</em></strong></h2>
+
+	    <button ion-button (click)="guardarEvento(tecnologia,tecnologia.id,tecnologia.categoria)">Aceptar</button>
+	    <button ion-button (click)="borrarEvaluacion(tecnologia.id,tecnologia.categoria)">Rechazar</button>
+
+	</ion-item>
+
+	</ion-list>
+
+	<ion-list >
+		<ion-item>
+			Ciencias Exactas
+		</ion-item>
+	<ion-item  *ngFor= " let ciencias of eventosC" text-wrap >
+
+	   <h2 ><strong><em>ID: {{ciencias.id}}</em></strong></h2>
+	    <h2 ><strong><em>Nombre: {{ciencias.nombre}}</em></strong></h2>
+	    <h2 ><strong><em>Hora: {{ciencias.hora}}</em></strong></h2>
+	    <h2 ><strong><em>Fecha: {{ciencias.fecha}}</em></strong></h2>
+	    <h2 ><strong><em>Lugar: {{ciencias.lugar}}</em></strong></h2>
+	    <h2 ><strong><em>Descripcion: {{ciencias.descripcion}}</em></strong></h2>
+	    <h2 ><strong><em>Inscripcion: {{ciencias.inscripcion}}</em></strong></h2>
+	    <h2 ><strong><em>Requisitos: {{ciencias.requisitos}}</em></strong></h2>
+
+	    <button ion-button (click)="guardarEvento(ciencias,ciencias.id,ciencias.categoria)">Aceptar</button>
+	    <button ion-button (click)="borrarEvaluacion(ciencias.id,ciencias.categoria)">Rechazar</button>
+
+	</ion-item>
+
+	</ion-list>
+		
+	<ion-list >
+		<ion-item>
+			Idiomas
+		</ion-item>
+	<ion-item  *ngFor= " let idiomas of eventosI" text-wrap >
+
+	   <h2 ><strong><em>ID: {{idiomas.id}}</em></strong></h2>
+	    <h2 ><strong><em>Nombre: {{idiomas.nombre}}</em></strong></h2>
+	    <h2 ><strong><em>Hora: {{idiomas.hora}}</em></strong></h2>
+	    <h2 ><strong><em>Fecha: {{idiomas.fecha}}</em></strong></h2>
+	    <h2 ><strong><em>Lugar: {{idiomas.lugar}}</em></strong></h2>
+	    <h2 ><strong><em>Descripcion: {{idiomas.descripcion}}</em></strong></h2>
+	    <h2 ><strong><em>Inscripcion: {{idiomas.inscripcion}}</em></strong></h2>
+	    <h2 ><strong><em>Requisitos: {{idiomas.requisitos}}</em></strong></h2>
+
+	    <button ion-button (click)="guardarEvento(idiomas,idiomas.id,idiomas.categoria)">Aceptar</button>
+	    <button ion-button (click)="borrarEvaluacion(idiomas.id,idiomas.categoria)">Rechazar</button>
+
+	</ion-item>
+
+	</ion-list>
+
+	<ion-list >
+		<ion-item>
+			Letras
+		</ion-item>
+	<ion-item  *ngFor= " let letras of eventosL" text-wrap >
+
+	   <h2 ><strong><em>ID: {{letras.id}}</em></strong></h2>
+	    <h2 ><strong><em>Nombre: {{letras.nombre}}</em></strong></h2>
+	    <h2 ><strong><em>Hora: {{letras.hora}}</em></strong></h2>
+	    <h2 ><strong><em>Fecha: {{letras.fecha}}</em></strong></h2>
+	    <h2 ><strong><em>Lugar: {{letras.lugar}}</em></strong></h2>
+	    <h2 ><strong><em>Descripcion: {{letras.descripcion}}</em></strong></h2>
+	    <h2 ><strong><em>Inscripcion: {{letras.inscripcion}}</em></strong></h2>
+	    <h2 ><strong><em>Requisitos: {{letras.requisitos}}</em></strong></h2>
+
+	    <button ion-button (click)="guardarEvento(letras,letras.id,letras.categoria)">Aceptar</button>
+	    <button ion-button (click)="borrarEvaluacion(letras.id,letras.categoria)">Rechazar</button>
+
+	</ion-item>
+
+	</ion-list>
+
+
+</ion-content>

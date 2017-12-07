@@ -1,0 +1,107 @@
+<ion-header>
+
+  <ion-navbar color="dark">
+    <ion-title>Eventos</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="fondo" padding color="primary">
+    <img class="logo" src="img/logo.png">
+
+	<ion-list>
+		<ion-item>
+			Arte
+		</ion-item>
+	<ion-item  *ngFor= " let arte of eventosA1" text-wrap >
+
+	    <h2 ><strong><em>Nombre: {{arte.nombre}}</em></strong></h2>
+	    <h2 ><strong><em>Fecha: {{arte.fecha}}</em></strong></h2>
+
+	    <button ion-button (click)="borrarEvento(arte.id,arte.categoria)">Eliminar</button>
+
+	</ion-item>
+
+	</ion-list>
+
+
+
+	<ion-list >
+		<ion-item>
+			Música
+		</ion-item>
+	<ion-item  *ngFor= " let musica of eventosM1" text-wrap >
+
+	    <h2 ><strong><em>Nombre: {{musica.nombre}}</em></strong></h2>
+	    <h2 ><strong><em>Fecha: {{musica.fecha}}</em></strong></h2>
+
+	    <button ion-button (click)="borrarEvento(musica.id,musica.categoria)">Eliminar</button>
+
+	</ion-item>
+
+	</ion-list>
+
+
+	<ion-list >
+		<ion-item>
+			Tecnología
+		</ion-item>
+	<ion-item  *ngFor= " let tecnologia of eventosT1" text-wrap >
+
+	    <h2 ><strong><em>Nombre: {{tecnologia.nombre}}</em></strong></h2>
+	    <h2 ><strong><em>Fecha: {{tecnologia.fecha}}</em></strong></h2>
+
+	    <button ion-button (click)="borrarEvento(tecnologia.id,tecnologia.categoria)">Eliminar</button>
+
+	</ion-item>
+
+	</ion-list>
+
+	<ion-list >
+		<ion-item>
+			Ciencias Exactas
+		</ion-item>
+	<ion-item  *ngFor= " let ciencias of eventosC1" text-wrap >
+
+	    <h2 ><strong><em>Nombre: {{ciencias.nombre}}</em></strong></h2>
+	    <h2 ><strong><em>Fecha: {{ciencias.fecha}}</em></strong></h2>
+
+	    <button ion-button (click)="borrarEvento(ciencias.id,ciencias.categoria)">Eliminar</button>
+
+	</ion-item>
+
+	</ion-list>
+		
+	<ion-list >
+		<ion-item>
+			Idiomas
+		</ion-item>
+	<ion-item  *ngFor= " let idiomas of eventosI1" text-wrap >
+
+	    <h2 ><strong><em>Nombre: {{idiomas.nombre}}</em></strong></h2>
+	    <h2 ><strong><em>Fecha: {{idiomas.fecha}}</em></strong></h2>
+
+	    <button ion-button (click)="borrarEvento(idiomas.id,idiomas.categoria)">Eliminar</button>
+
+	</ion-item>
+
+	</ion-list>
+
+	<ion-list >
+		<ion-item>
+			Letras
+		</ion-item>
+	<ion-item  *ngFor= " let letras of eventosL1" text-wrap >
+
+	    <h2 ><strong><em>Nombre: {{letras.nombre}}</em></strong></h2>
+	    <h2 ><strong><em>Fecha: {{letras.fecha}}</em></strong></h2>
+
+	    <button ion-button (click)="borrarEvento(letras.id,letras.categoria)">Eliminar</button>
+
+	</ion-item>
+
+	</ion-list>
+
+
+</ion-content>
